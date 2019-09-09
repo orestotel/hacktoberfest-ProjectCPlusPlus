@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 void count(double x, double y) {
     short temp;
@@ -28,7 +29,15 @@ void count(double x, double y) {
     }
     cout << "The coordinates stand in "<<temp<<"\' area"<< endl;
 
-    /* continue with adding a circle*/
+    if(x>=M_PI&&y>=M_PI){
+        cout<<"The coordinate successfully landed outside the circle";
+    }
+    if(!(x>=M_PI&&y>=M_PI)){
+        cout<<"ERROR. The coordinate didn\'t landed outside the circle";
+    }
+    cout<<M_PI;
+
+    /* continue with NOT adding a circle but ENUMERATING CIRCLE BORDERS. Or do we just need Pi?*/
 
 }
 int main() {
