@@ -1,6 +1,8 @@
 # ProjectCPlusPlus
  My C++ Project. Feel free to contribute. I am just practicing here
 
-
- 1. YouAreYoung.cpp
- 2. CircleSquare.cpp
+List of files:
+ 1. YouAreYoung.cpp (works)
+ 2. CircleSquare.cpp (not working)
+ 3. BoxerWorld.cpp (off-topic project, to be developed)
+ 4. CaseFunction1.cpp (not working properly)(Homework if24-if27 about cases)
