@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+/*This code still doesn't work properly, but if you like the tamplate,
+you may use it or modify it to your needs*/
 void count(double x, double y) {
     short temp;
     /*
