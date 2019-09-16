@@ -66,6 +66,7 @@ void FourthFunc(){
     ... Input \'1\', \'2\' or \'3\'"
     cin>>y;
     if(y==1){
+<<<<<<< HEAD
       x = Cos(x); y="cosine"
     }
     if(y==2){
@@ -75,6 +76,17 @@ void FourthFunc(){
       x =  tan(x);y="tangens"
     }
 cout<<x<<" is the result of "<<y;
+=======
+      x = Cos(x);
+    }
+    if(y==2){
+      x = sin(x);
+    }
+    if(y==3){
+      x =  tan(x);
+    }
+cout<<x<<" result";
+>>>>>>> 1ac6c311553879026fa637a3e88acc73fda3a952
   }
 int main(){
 double x;
