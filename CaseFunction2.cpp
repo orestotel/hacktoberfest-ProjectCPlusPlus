@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath> // for sine function
 using namespace std;
-void FirstFunc(x){//The First Task
+void FirstFunc(){
+  double x;//The First Task
   cout<<"This is the first task\n Input value:";
   cin>>x;
   if(x>0){
@@ -12,7 +13,8 @@ void FirstFunc(x){//The First Task
   }
   cout<<"The result is "<<x<<", compilation over.";
 }
-void SecondFunc(x){
+void SecondFunc(){
+  double x;
   cout<<"This is the second task\n Input value:";
   cin>>x;
   if(x<-2||x>2){
@@ -21,7 +23,8 @@ void SecondFunc(x){
   else x=-3*x;
   cout<<"The result is "<<x<<", compilation over.";
 }
-void ThirdFunc(x){
+void ThirdFunc(){
+  double x;
   cout<<"This is the third task\n Input value:";
   cin>>x;
   if(x<=0){
@@ -35,7 +38,8 @@ void ThirdFunc(x){
   }
   cout<<"The result is "<<x<<", compilation over.";
 }
-void FourthFunc(x){
+void FourthFunc(){
+  double x;
     cout<<"This is the fourth task\n Input value:";
     cin>>x;
     if(x<0){
@@ -49,17 +53,33 @@ void FourthFunc(x){
     }
     cout<<"The result is "<<x<<", compilation over.";
 }
+  void FinalFunc(){
+    double x;
+    char y;
+    cout<<"This is the last tast with TEXT INTERFACE.\n"<<endl;
+    cout<<"Please enter your X value for further operations";
+    cin>>x;
+    cout<<"\n Now, Please choose an option:\n \n
+    1) calculate CoSine\n
+    2) calculate   Sine\n
+    3) calculate tangens\n
+    ... Input \'1\', \'2\' or \'3\'"
+    cin>>y;
+    if(y==1){
+      x = Cos(x);
+    }
+    if(y==2){
+      x = sin(x);
+    }
+    if(y==3){
+      x =  tan(x);
+    }
+cout<<x<<" result";
+  }
 int main(){
 double x;
-cout<<"Input value:";
-cin>>x;
-if(x>0){
-  x = 2*sin(x);
-}
-if(x<=0){
-  x = 6-x;
-}
-cout<<"The result is "<<x<<", compilation over.";
+FirstFunc();SecondFunc();ThirdFunc();FourthFunc();
+FinalFunc();
   system("wait");
   return 0;
 }
