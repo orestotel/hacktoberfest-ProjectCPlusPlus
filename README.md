@@ -7,3 +7,7 @@ List of files:
  3. BoxerWorld.cpp (off-topic project, to be developed)
  4. CaseFunction1.cpp (not working properly; Homework if24-if27 about cases)
  5. CaseFunction2.cpp (works, but with __IF__ instead of __SWITCH__)
+ 6. cycles.cxx (shows how cycles work)
+ 7. intmax.cpp (to be continued, works)
+ 8. ln(x+1)-func.cpp (evaluates logarithm, works)
+ 9. stairycycle.cpp (works, shows how cycles work)
