@@ -13,3 +13,4 @@ List of files:
  9. stairycycle.cpp (works, shows how cycles work)
  10. BubbleSortt.cpp (sorting algorythm from class, works)
  11. max-ind-array.cpp (array operation with max and ind, works)
+ 12. maxsum.cpp (array maxsum operations, works)
