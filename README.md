@@ -12,3 +12,4 @@ List of files:
  8. ln(x+1)-func.cpp (evaluates logarithm, works)
  9. stairycycle.cpp (works, shows how cycles work)
  10. BubbleSortt.cpp (sorting algorythm from class, works)
+ 11. max-ind-array.cpp (array operation with max and ind, works)
