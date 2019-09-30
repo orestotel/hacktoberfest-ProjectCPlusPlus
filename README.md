@@ -11,3 +11,4 @@ List of files:
  7. intmax.cpp (to be continued, works)
  8. ln(x+1)-func.cpp (evaluates logarithm, works)
  9. stairycycle.cpp (works, shows how cycles work)
+ 10. BubbleSortt.cpp (sorting algorythm from class, works)
