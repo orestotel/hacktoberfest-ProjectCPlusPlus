@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <cmath>
 using namespace std;
 /*This code still doesn't work properly, but if you like the tamplate,
 you may use it or modify it to your needs*/
@@ -49,7 +50,7 @@ int main() {
     double rx,ry;       //rx= X coordinate of center  and ry= Y coordinate of center 
     rx=ry=0;            //making them to by default to 0
     
-    cout<<"Square's length is 2 units and the center is in the origin (0,0)
+    cout<<"Square's length is 2 units and the center is in the origin (0,0)";
     cout<<"\n The Circle of Radius 1 is also centered at (0,0)";
     cout<<"\n So Enter a coordinate to check if that point is inside the square but outside the circle or not";
     
