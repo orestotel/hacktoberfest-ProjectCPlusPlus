@@ -20,4 +20,4 @@ List of files:
  16. matrice_special_el.cpp (works)
  17. pair_numbers.cpp (review required)
  18. special_matrice_elements.cpp (review required)
- 19. delete_row.cpp (___#TODO___ returns max element, does not count sum of line of the matrix, does not delete line with lowest sum of elements from the matrix)
+ 19. delete_row.cpp (_works_, returns max element, counts sum of line of the matrix, does not delete line with lowest sum of elements from the matrix but nullifies them)
