@@ -21,3 +21,4 @@ List of files:
  17. pair_numbers.cpp (review required)
  18. special_matrice_elements.cpp (review required)
  19. delete_row.cpp (_works_, returns max element, counts sum of line of the matrix, does not delete line with lowest sum of elements from the matrix but nullifies them)
+ 20. function.cpp(in progress)
