@@ -66,13 +66,14 @@ cout<<endl;
 
 		count += a[i][j];
       if(a[i][j]>max){
-		  
+
         max = a[i][j];
         cout<<max<<"  ["<<i<<";"<<j<<"]"<<endl;
       }
       else{cout<<max<<" Not changed;"<<endl;}
     }
-    cout<<"^^"<<count<<"^" << endl;
+    cout<<"SUM == ^"<<count<<"^" << endl;
+    cout<<endl;
 	if (writeLowestSum)
 	{
 		lowestSum = count;
@@ -99,6 +100,7 @@ cout<<endl;
 
   for (int k = 0; k < line; ++k)
   {
+    cout<<"del - ["<<lowestSumPos<<";"<<k<<"]"<<endl;
 	a[lowestSumPos][k] = 0;
   }
 
@@ -111,6 +113,10 @@ cout<<endl;
     for (int j = 0; j < line; ++j)
     {
       cout<< a[i][j]<<"'";
+
+    }
+    if(i==lowestSumPos){
+      cout<<" (deleted)";
     }
     cout<<endl;
   }
