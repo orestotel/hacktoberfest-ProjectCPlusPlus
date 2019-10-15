@@ -31,3 +31,5 @@ for(int i=0;i<n;i++){
     cout<<"NUMBER OF FIBONACCI NUMBERS:"<<k<<endl;
   return 0;
 }
+//ПРОТаБУЛЮВАТИ ФУНКЦІЮ, ЗАДАНУ ФОРМУЛОЮ(кроком 1) сума 
+// С: к=1 ~ infinity: ((-1)^(k+1)\(2k+1)!*(x/3)^(2k+1))
