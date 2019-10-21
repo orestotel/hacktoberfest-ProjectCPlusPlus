@@ -14,19 +14,18 @@ int main(){
   //fill array with R numbers
   for(int i=0;i<n;i++){
     cout<<"Number #"<<i<<endl;
-    cin>>arr[n];
-    cout<<arr[n]<<" successfully recorded;"<<endl;
+    cin>>arr[i];
+    cout<<arr[i]<<" successfully recorded;"<<endl;
     cout<<endl;
   }
   //calculate the closest float
   max = arr[0];
   for(int i=0;i<n;i++){
-if(fabs(arr[i]-round(arr[i]))<=0.5){
-  cout<<fabs(arr[i]-round(arr[i]))<<" less than 5 or even to;"<<endl;
+if(fabs(arr[i]-round(arr[i]))<=max){
+  max=fabs(arr[i]-round(arr[i]));
+  cout<<"NEW MAX:"<<max<<"  NUMBER IS "<<arr[i]<<"; element num is#"<<i<<endl;
 }
-if(fabs(arr[i]-round(arr[i]))>0.5){
-  cout<<fabs(arr[i]-round(arr[i]))<<"more than 5"<<endl;
-}
+else{cout<<"no new max"<<endl;}
   }
   cout<<endl<<"end of calculation"<<endl;
 }
