@@ -24,3 +24,8 @@ List of files:
  20. function.cpp(MEMORY BUG) # TODO
  21. isFibonacci (works perfectly, counts how many of the entered numbers are fibonacci numbers)
  22. sumTabulateFunc.cpp (Works, take a look at the suggested input)
+ 23. test_1.cpp(program from test op5. #2)
+ 24. test_2.cpp(program from test op5. #3)
+ 25. dist.cpp (works, vector reference)
+ 26. max_a_i.cpp (works, sorts and returns sorted array of unique elements)
+ 27. integr.cpp ( #TODO )
