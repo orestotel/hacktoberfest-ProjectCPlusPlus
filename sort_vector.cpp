@@ -15,7 +15,24 @@ void sort(double *a, int n){
 }
 //Have to delete repeating special_matrice_elements
 void unique(double*a,int&n){
-
+  for(int i=0; i<n; i++){
+    for(int j = i+1; j<n;j++){
+      if(a[i]!=a[j]){
+        break;
+      }
+      else{
+        for(int k = j; k<n-1;k++){
+          a[k] = a[k+1];
+          //     1 1 1 2 3 3
+          // - > 1 1 2 3 3 3
+          // - > 1 1 2 3 3 -
+        }
+        n--;
+        j--;
+      }
+    }
+  }
+  return 0;
 }
 int main(){
 
