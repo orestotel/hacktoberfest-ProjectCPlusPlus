@@ -4,7 +4,7 @@ using namespace std;
 void sort(double *a, int n){
   double temp;
   for(int i=0;i<n-1;i++){
-    for(int j=0; j<n-i-i;j++){
+    for(int j=0; j<n-1-i;j++){
       if(a[j]>a[j+1]){
         temp = a[j];
         a[j] = a[j+1];
@@ -32,8 +32,26 @@ void unique(double*a,int&n){
       }
     }
   }
-  return 0;
+}
+void print(double *a, int n){
+  for(int i=0;i<n;i++){
+    cout<<a[i]<<" ";
+  }
+  cout<<endl;
 }
 int main(){
-
+int n;
+cin>>n;
+double *a = new double[n];
+for(int i=0;i<n;i++){
+  cin>>a[i];
+}
+print(a,n);
+sort(a,n);
+print(a,n);
+unique(a,n);
+print(a,n);
+delete[]a;
+system("pause");
+return 0;
 }
