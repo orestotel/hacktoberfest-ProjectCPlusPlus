@@ -62,14 +62,15 @@ void FinalFunc() {
 	cin >> x;
 	cout << "\n Now, Please choose an option:\n \n1) calculate CoSine\n2) calculate   Sine\n3) calculate tangens\n... Input \'1\', \'2\' or \'3\'";
 		cin>> y;
-	if (y == "1") {
-		x = cos(x); y = "cosine";
-	}
-	if (y == "2") {
-		x = sin(x); y = "sine";
-	}
-	if (y == "3") {
-		x = tan(x); y = "tangens";
+	switch(y){
+		case "1": x = cos(x); y = "cosine";
+				  break;
+		case "2": x = sin(x); y = "sine";
+				  break;
+		case "3": x = tan(x); y = "tangens";
+				  break;
+		default:  break;
+		
 	}
 	cout << x << " is the result of " << y;
 	system("wait");
