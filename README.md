@@ -30,3 +30,4 @@ List of files:
  26. max_a_i.cpp (works, sorts and returns sorted array of unique elements)
  27. integr.cpp (works, counts integral, but not specific)
  28. IsPrime(works, checks if number is prime or symethrical)
+ 29. struct_complex.cpp(works.Scalar multiplication, Complex numbers)
