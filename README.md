@@ -31,3 +31,4 @@ List of files:
  27. integr.cpp (works, counts integral, but not specific)
  28. IsPrime(works, checks if number is prime or symethrical)
  29. struct_complex.cpp(works.Scalar multiplication, Complex numbers)
+ 30. vector_point.cpp (works, finds distance and coordinates of the longest vector)
