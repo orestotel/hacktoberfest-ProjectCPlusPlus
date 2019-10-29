@@ -9,7 +9,7 @@ struct complex{
 void input(complex &x){
   cin>>x.re>>x.im;
 }
-void pring(complex x){
+void print(complex x){
   cout<<x.re;
   if(x.im>0){
     cout<<"+";
@@ -48,7 +48,7 @@ int main(){
   for(int i = 0; i<n; i++){
     scalar = add(scalar,mult(a[i],b[i]));
   }
-  
+
   cout<<"scalar is equal to: "
   print(scalar);
   cout<<endl;
@@ -56,3 +56,4 @@ int main(){
   delete[]a;delete[]b;
   return 0;
 }
+//does not work
