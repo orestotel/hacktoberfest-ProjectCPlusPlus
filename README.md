@@ -28,4 +28,5 @@ List of files:
  24. test_2.cpp(program from test op5. #3)
  25. dist.cpp (works, vector reference)
  26. max_a_i.cpp (works, sorts and returns sorted array of unique elements)
- 27. integr.cpp ( #TODO )
+ 27. integr.cpp (works, counts integral, but not specific)
+ 28. IsPrime(works, checks if number is prime or symethrical)
