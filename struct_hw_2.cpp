@@ -41,7 +41,8 @@ fraction add(fraction x,fraction y){
 
     }
     if(x.even==y.even){
-      result
+      result.up=result.dw=1;
+      result.even=2;
     }
   }
   if(sw==0){
