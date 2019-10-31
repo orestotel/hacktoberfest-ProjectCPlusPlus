@@ -11,19 +11,19 @@ struct fraction{
 fraction add(fraction x,fraction y){
   fraction result;
   bool sw=0;
-  //default case
-  if(x.dw==y.dw){
-    result.up = x.up+y.up;
-    result.dw = x.dw;
-  }
   if(x.up==x.dw){
     x.even=1;
     x.up=0;
   }
   if(y.up==y.dw){
     y.even=1;
-    y.up=0;
+    y.up=0;  }
+  //default case
+  if(x.dw==y.dw){
+    result.up = x.up+y.up;
+    result.dw = x.dw;
   }
+
   //common dw
   if((x.dw!=y.dw)&&(x.even==0&&y.even==0)){
     y.up = y.up*x.dw;
@@ -32,18 +32,7 @@ fraction add(fraction x,fraction y){
     x.dw = x.dw*y.dw;
     result.up = x.up+y.up;
     result.dw = x.dw;
-  }
-  else{
-    if(x.even==1&&y.even!=1){
 
-    }
-    if(y.even==1&&x.even!=1){
-
-    }
-    if(x.even==y.even){
-      result.up=result.dw=1;
-      result.even=2;
-    }
   }
   if(sw==0){
   //make fraction right
@@ -61,14 +50,14 @@ fraction add(fraction x,fraction y){
 return result;
 };
 void check_add(fraction a, fraction b){
-  fraction x=a,y=b,result, res_add=add(a,b);
+  fraction x=a,y=b,res, res_add=add(a,b);
 y.up = y.up*x.dw;
 y.dw = y.dw*x.dw;
 x.up = x.up*y.dw;
 x.dw = x.dw*y.dw;
-result.up = x.up+y.up;
-result.dw = x.dw;
-double divis_a = (result.up/result.dw);
+res.up = x.up+y.up;
+res.dw = x.dw;
+double divis_a = (res.up/res.dw+res.even*res.dw);
 double divis_b = (res_add.even*res_add.dw+res_add.up)/res_add.dw;
 if(divis_a==divis_b){
   cout<<"Good addition"<<endl;
@@ -92,8 +81,6 @@ void print(fraction x){
 }
 
 int main(){
-  int n;
-  cin>>n;
   fraction a,b, result;
   cout<<"Input begins."<<endl;
   input(a);
