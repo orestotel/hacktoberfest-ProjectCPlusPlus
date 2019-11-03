@@ -32,7 +32,6 @@ fraction add(fraction x,fraction y){
     x.dw = x.dw*y.dw;
     result.up = x.up+y.up;
     result.dw = x.dw;
-
   }
   if(sw==0){
   //make fraction right
