@@ -12,12 +12,26 @@ void inp(frac &a){
   cout<<"Input fraction:"<<endl;
   cout<<"up: ";
   cin>>a.up;
+  if(a.up!=floor(a.up)){
+    cout<<"should input integers"<<endl;
+    while(a.up!=floor(a.up)){
+      cout<<"please input INT:";
+      cin>>a.up;
+    }
+  }
   cout<<a.up<<" recorded;"<<endl;
-  cout<<"------"<<endl;
+  cout<<"~~~~~~~~~~"<<endl;
   cout<<"dw: ";
   cin>>a.dw;
+  if(a.dw!=floor(a.dw)||a.dw==0){
+    cout<<"should input integers (NOT 0 as well)"<<endl;
+    while(a.dw!=floor(a.dw)||a.dw==0){
+      cout<<"please input INT (NOT 0):";
+      cin>>a.dw;
+    }
+  }
   cout<<a.dw<<" recorded;"<<endl;
-  cout<<"-----------";
+  cout<<"~~~~~~~~~~~";
   cout<<endl;
   cout<<endl;
 }
@@ -65,13 +79,50 @@ a.exact = (a.up/a.dw);
 cout<<" exact:"<<a.exact<<endl;
 cout<<a.up<<"/"<<a.dw<<"= <"<<a.ev;
 a.r_up!=0?cout<<" | "<<a.r_up<<"/"<<a.r_dw<<">"<<endl:cout<<">";
-cout<<endl;
 }
+frac divide(frac a, frac b){
+  frac res;
+
+  return res;
+}
+frac multiply(frac a, frac b){
+  frac res;
+
+  return res;
+}
+
+
+
 int main(){
 frac a,b, res;
+cout<<"----------addition----------"<<endl;
 inp(a);
 inp(b);
 res = add(a,b);
 shorten(res);
 print(res);
+cout<<endl;
+cout<<"-------end_of_addition-------"<<endl;
+//---------------------------
+cout<<"-------start_of_division-----"<<endl;
+inp(a);
+inp(b);
+res = divide(a,b);
+shorten(res);
+print(res);
+cout<<endl;
+cout<<"--------end_of_division------"<<endl;
+//---------------------------
+cout<<"---start_of_multiplication---"<<endl;
+inp(a);
+inp(b);
+res = multiply(a,b);
+shorten(res);
+print(res);
+cout<<endl;
+cout<<"----end_of_multiplication----"<<endl;
+
+
+
+return 0;
 }
