@@ -33,6 +33,11 @@ frac add(frac a, frac b){
         res.ev = res.ev+1;
       }
     }
+    else{
+      res.r_up = res.up;
+      res.ev = 0;
+
+    }
 
   return res;
 };
