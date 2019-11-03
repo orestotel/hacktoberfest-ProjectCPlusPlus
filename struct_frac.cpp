@@ -6,7 +6,7 @@ struct frac{
   int up, dw, ev=0;
   double exact;
 };
-void inp(frac a){
+void inp(frac &a){
   cout<<endl;
   cout<<"Input fraction:"<<endl;
   cout<<"up: ";
@@ -21,13 +21,11 @@ void inp(frac a){
   cout<<"-----------";
   cout<<endl;
   cout<<endl;
-  return a;
 }
 void add(frac a, frac b){
   frac res;
   res.dw = a.dw*b.dw;
   res.up = a.up*b.dw + b.up*a.dw;
-  return res;
 }
 void print(frac a){
 cout<<"Fraction: up:"<<a.up;
