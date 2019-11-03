@@ -3,9 +3,9 @@
 using namespace std;
 int i = 0;
 struct frac{
-  int up, dw, ev=0;
-  int r_up=0;
-  double exact;
+  long double exact =0.01;
+  double up, dw, ev=0;
+  int r_up=0, r_dw;
 };
 void inp(frac &a){
   cout<<endl;
@@ -38,16 +38,34 @@ frac add(frac a, frac b){
       res.ev = 0;
 
     }
-
+    res.exact = (res.up/res.dw);
   return res;
 };
+void shr(frac &a){
+  a.r_dw = a.dw;
+  if((a.r_up>0 && a.r_dw<0) || (a.r_up<0 && a.r_dw<0))
+  {
+    a.r_up*=-1;
+    a.r_dw*=-1;
+  }
+  for(int i= sqrt((abs(a.r_up)>abs(a.r_dw)?abs(a.r_up):abs(a.r_dw)));i>1;i--)
+  {
+    if(a.r_up%i == 0 && a.r_dw%i == 0)
+    {
+      a.r_up/=i;
+      a.r_dw/=i;
+    }
+  }
+}
 void print(frac a){
 cout<<"Fraction: up:"<<a.up;
 cout<<" dw:"<<a.dw;
 cout<<" ev:"<<a.ev;
-a.exact = a.up/a.dw;
+a.exact = (a.up/a.dw);
 cout<<" exact:"<<a.exact<<endl;
-cout<<a.up<<"/"<<a.dw<<"= <"<<a.ev<<" | "<<a.r_up<<"/"<<a.dw<<">"<<endl;
+cout<<a.up<<"/"<<a.dw<<"= <"<<a.ev;
+a.r_up!=0?cout<<" | "<<a.r_up<<"/"<<a.dw<<">"<<endl:cout<<">";
+cout<<endl;
 }
 int main(){
 frac a,b, res;
