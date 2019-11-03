@@ -4,7 +4,7 @@ using namespace std;
 //using fractions
 int i = 0;
 struct fraction{
-  double up, dw, even=0;
+  int up, dw, even=0;
 }; //always use semicolon after types;
 
 //addition of the fractions
@@ -49,6 +49,23 @@ fraction add(fraction x,fraction y){
 }
 return result;
 };
+void shorten(fraction &x)
+{
+  if((x.up>0 && x.dw<0) || (x.up<0 && x.dw<0))
+  {
+    x.up*=-1;
+    x.dw*=-1;
+  }
+  for(int i= sqrt((abs(x.up)>abs(x.dw)?abs(x.up):abs(x.dw)));i>1;i--)
+  {
+    if(x.up%i == 0 && x.dw%i == 0)
+    {
+      x.up/=i;
+      x.dw/=i;
+    }
+  }
+}
+
 void check_add(fraction a, fraction b){
   fraction x=a,y=b,res, res_add=add(a,b);
 y.up = y.up*x.dw;
