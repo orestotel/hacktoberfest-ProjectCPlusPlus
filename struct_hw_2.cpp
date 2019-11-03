@@ -109,10 +109,13 @@ int main(){
   }
   //check if right
 check_add(a,b);
-print(add(a,b));
+fraction res = add(a,b);
+shorten(res);
+print(res);
 cout<<endl;
 cout<<"-----------------"<<endl;
 cout<<"End of execution."<<endl;
 
   return 0;
 }
+//modification by Volodia
