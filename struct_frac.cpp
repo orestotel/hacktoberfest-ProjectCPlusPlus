@@ -41,7 +41,7 @@ frac add(frac a, frac b){
     res.exact = (res.up/res.dw);
   return res;
 };
-void shr(frac &a){
+void shorten(frac &a){
   a.r_dw = a.dw;
   if((a.r_up>0 && a.r_dw<0) || (a.r_up<0 && a.r_dw<0))
   {
@@ -64,12 +64,14 @@ cout<<" ev:"<<a.ev;
 a.exact = (a.up/a.dw);
 cout<<" exact:"<<a.exact<<endl;
 cout<<a.up<<"/"<<a.dw<<"= <"<<a.ev;
-a.r_up!=0?cout<<" | "<<a.r_up<<"/"<<a.dw<<">"<<endl:cout<<">";
+a.r_up!=0?cout<<" | "<<a.r_up<<"/"<<a.r_dw<<">"<<endl:cout<<">";
 cout<<endl;
 }
 int main(){
 frac a,b, res;
 inp(a);
 inp(b);
-print(add(a,b));
+res = add(a,b);
+shorten(res);
+print(res);
 }
