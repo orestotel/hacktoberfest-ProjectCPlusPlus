@@ -40,27 +40,31 @@ frac add(frac a, frac b){
   res.dw = a.dw*b.dw;
   res.up = a.up*b.dw + b.up*a.dw;
 
-    if(res.up>=res.dw){
-      res.r_up = res.up;
-      while(res.r_up>=res.dw){
-        res.r_up= res.r_up-res.dw;
-        res.ev = res.ev+1;
+      if(res.up>=res.dw){
+        res.r_up = res.up;
+        while(res.r_up>=res.dw){
+          res.r_up= res.r_up-res.dw;
+          res.ev = res.ev+1;
+        }
       }
-    }
-    else{
-      res.r_up = res.up;
-      res.ev = 0;
+      else{
+        res.r_up = res.up;
+        res.ev = 0;
 
-    }
-    res.exact = (res.up/res.dw);
+      }
+
+      res.exact = (res.up/res.dw);
   return res;
 };
 void shorten(frac &a){
   a.r_dw = a.dw;
+  a.r_up = a.up;
+  cout<<"--simplification_start--"<<endl;
   if((a.r_up>0 && a.r_dw<0) || (a.r_up<0 && a.r_dw<0))
   {
     a.r_up*=-1;
     a.r_dw*=-1;
+    cout<<")negated"<<endl;
   }
   for(int i= sqrt((abs(a.r_up)>abs(a.r_dw)?abs(a.r_up):abs(a.r_dw)));i>1;i--)
   {
@@ -70,6 +74,27 @@ void shorten(frac &a){
       a.r_dw/=i;
     }
   }
+  cout<<"(simplifying...";
+
+      if(a.up>=a.dw){
+        a.r_up = a.up;
+        while(a.r_up>=a.dw){
+          a.r_up= a.r_up-a.dw;
+          a.ev = a.ev+1;
+        }
+      }
+      else{
+        a.r_up = a.up;
+        a.ev = 0;
+
+      }
+
+
+
+    cout<<")successfully simplified;"<<endl;
+      a.exact = (a.up/a.dw);
+    cout<<"--end_of_simplification--"<<endl;
+    cout<<"```````````````````````````";
 }
 void print(frac a){
 cout<<"Fraction: up:"<<a.up;
@@ -77,17 +102,30 @@ cout<<" dw:"<<a.dw;
 cout<<" ev:"<<a.ev;
 a.exact = (a.up/a.dw);
 cout<<" exact:"<<a.exact<<endl;
+cout<<"```````````````````````````";
+
 cout<<a.up<<"/"<<a.dw<<"= <"<<a.ev;
-a.r_up!=0?cout<<" | "<<a.r_up<<"/"<<a.r_dw<<">"<<endl:cout<<">";
+if(a.r_up!=0){
+cout<<" | "<<a.r_up<<"/"<<a.r_dw<<">"<<endl;
+cout<<"```````````````````````````";
+}
+else{
+cout<<">";
+cout<<"```````````````````````````";
+}
+//a.r_up!=0?cout<<" | "<<a.r_up<<"/"<<a.r_dw<<">"<<endl:cout<<">";
+//switch of prin-ting. works with division
 }
 frac divide(frac a, frac b){
   frac res;
-
+res.up = a.up*b.dw;
+res.dw = b.up*a.dw;
   return res;
 }
 frac multiply(frac a, frac b){
   frac res;
-
+res.up = a.up*b.up;
+res.dw = a.dw * b.dw;
   return res;
 }
 
