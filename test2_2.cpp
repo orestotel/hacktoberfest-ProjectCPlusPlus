@@ -66,9 +66,11 @@ for(int i=n-1;i>=0;i--){
   vect[actual-ac_c] = arr[i][0];
   cout<<" vect - > "<<vect[actual-ac_c];
   ac_c--;
-} 
+}
 cout<<endl;
 //print RESULT
 cout<<"VECTOR CREATED! :)"<<endl;
+delete[]arr;
+delete[]vect;
 return 0;
 }
