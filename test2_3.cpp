@@ -3,7 +3,6 @@
 using namespace std;
 int main(){
   int n, counter=0;
-  double max = 0;
   cout<<"Enter the dimension value: ";
   cin>>n;
   cout<<endl;
@@ -13,10 +12,17 @@ int main(){
     cin>>arr[i];
     cout<<endl;
   }
+    double max = arr[0], min = arr[0];
   //scan for maximum
   for(int i=0; i<n;i++){
     if(arr[i]>max){
       max = arr[i];
+    }
+  }
+  //scan for minimum
+  for(int i=0; i<n;i++){
+    if(arr[i]<min){
+      min = arr[i];
     }
   }
   //how many maximums
@@ -31,8 +37,8 @@ int main(){
   double *res = new double[n+counter];
   for(int i=0; i<n+counter;i++){
     if(arr[i]==max){
-      res[i] = arr[i];
-      res[i+1] = max;
+      res[i] = min;
+      res[i+1] = arr[i];
       i++;
     }
     else{
