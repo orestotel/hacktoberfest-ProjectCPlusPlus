@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
+Every version is supported yet, because the project is only consisting with constantly updated list of files that are mutually independent. Hence, compactibility depends solely on any particular file.
 currently being supported with security updates.
 
 | Version | Supported          |
