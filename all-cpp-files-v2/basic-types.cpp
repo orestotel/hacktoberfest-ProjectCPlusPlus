@@ -7,12 +7,12 @@ protected:
 public:
   Figure():color(""){}
   Figure(string c):color(c){}
-  void input(istream&in){in>>color;}
-  void output(ostream&out){out<<color<<"";}
+  virtual void input(istream&in){in>>color;}
+  virtual void output(ostream&out){out<<color<<"";}
   string getColor()const{return color;}
-  void setColor(string c){color = c;}
-  double square(){}
-  double perym(){}
+  virtual void setColor(string c){color = c;}
+  virtual double square(){return 0;}
+  virtual double perym(){return 0;}
 
 };
 //похідний клас
@@ -21,12 +21,11 @@ private:
   double r,x,y;
 public:
   Circle():Figure(),r(0),x(0),y(0){}
-  Circle(string c, double r1, double x1, double y1){
-    Figure(c),r(r1),x(x1),y(y1);
-  }
+  Circle(string c, double r1, double x1, double y1)
+  Figure(c),r(double r1),x(double x1),y(double y1){}
   void input(istream&in){
     Figure::input(in);
-    in>>x>>y;
+    in>>r>>x>>y;
   }
   void output(ostream&out){
     out<<color<<""<<r<<endl;
