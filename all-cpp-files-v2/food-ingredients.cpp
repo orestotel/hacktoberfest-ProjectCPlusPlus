@@ -13,7 +13,7 @@ public:
 	void set(){
 		cout << "Name of ingredient: ";
 		cin >> name;
-		cout << "Setting a " << name << "ingredient" << endl;
+		cout << "Setting a '" << name << "' ingredient" << endl;
 
 		cout << "Calories: ";
 		cin >> calories;
@@ -28,7 +28,7 @@ public:
 class food {
 private:
 	string name;
-	int n=1;
+	int n = 1;
 	part* parts;
 public:
 	void set() {
