@@ -3,24 +3,7 @@
 using namespace std;
 // Інградієнт, страва (назва, калорійність, ціна) (Назва, масив інградієнтів)
 
-class food {
-private:
-	string name;
-	int n=1;
-	part* parts;
-public:
-	void set() {
-		cout << "setting a dish." << endl;
-		cout << "Enter name of the dish: ";
-		cin >> name;
-		cout << "Dish-name: " << name << endl;
-		cout << "Enter number of ingredients: ";
-		cin >> n;
-		parts = new part[n];
-		cout << "number of ingredients: " << n << endl;
-		//enter ingredients into the existing array.
-	}
-};
+
 class part {
 private:
 	string name;
@@ -41,6 +24,24 @@ public:
 		cout << endl;
 	}
 
+};
+class food {
+private:
+	string name;
+	int n=1;
+	part* parts;
+public:
+	void set() {
+		cout << "setting a dish." << endl;
+		cout << "Enter name of the dish: ";
+		cin >> name;
+		cout << "Dish-name: " << name << endl;
+		cout << "Enter number of ingredients: ";
+		cin >> n;
+		parts = new part[n];
+		cout << "number of ingredients: " << n << endl;
+		//enter ingredients into the existing array.
+	}
 };
 //масиви
 
