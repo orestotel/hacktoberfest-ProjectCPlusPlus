@@ -9,7 +9,7 @@ protected:
   int year=0;
   string name="";
 public:
-  setV(){
+  void setV(){
     cout<<"Enter the name of the car";
     cin>>name;
     cout<<"Enter year of production: ";
@@ -23,7 +23,7 @@ protected:
   double capacity = 0;
   double price = 0;
 public:
-  setS(){
+  void setS(){
     cout<<"set capacity: ";
     cin>>capacity;
     cout<<"Set price: ";
@@ -36,7 +36,7 @@ protected:
   double space = 0;
   double allowedMass = 0;
 public:
-  setT(){
+  void setT(){
     cout<<"Set space: ";
     cin>>space;
     cout<<"Set allowed mass: ";
@@ -44,7 +44,28 @@ public:
   }
 };
 int main(){
-  int
+  cout<<"--Cars-types-program--"<<endl;
+  cout<<"Enter the total number of cars: ";
+  int n=0;
+  bool type = 0
+  cin>>n;
+  cout<<"Creating "<<n<<" cars;"<<endl;
+  cout<<"Keep in mind:"<<endl;
+  cout<<"0 - Sedan"<<endl;
+  cout<<"1 - Truck"<<endl;
+
+  for(int i=0;i<n;i++){
+    cout<<"Enter the type of the car: ";
+
+    switch(type){
+      case 0:
+      cout<<"Chosen type Sedan"<<endl;
+      break;
+      case 1:
+      cout<<"Chosen type Truck"<<endl;
+      break;
+    }
+  }
 
 }
 
