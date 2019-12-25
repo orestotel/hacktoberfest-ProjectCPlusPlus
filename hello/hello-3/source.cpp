@@ -10,10 +10,17 @@ public:
 
 };
 class rectangle{
-:
+protected:
 public:
-}
-class triangle
+};
+class square{
+private:
+public:
+};
+class triangle{
+private:
+public:
+};
 int main(){
 
 }
