@@ -116,15 +116,18 @@ class business:public luggage{
 int main(){
   ifstream in("input-1.txt");
   ofstream out("result.txt");
-  int n = 0;
+  size_t * count = new size_t[4];
+  count[0] = 0;
 //PHASE 1
-  in>>n;
-oblik * arr1 = new oblik[n];
+  in>>count[1];
+  count[0]+= count[1];
+  cout<<count[1]<<endl;
+oblik * arr1 = new oblik[count[1]];
 in>>arr1[0];
 out<<arr1[0];
 double max = arr1[0].priceOut();
 size_t maxPos = 0;
-for(int i=1; i<n;i++){
+for(int i=1; i<count[1];i++){
   in>>arr1[i];
     if(max>arr1[i].priceOut()){
       maxPos = i;
@@ -138,13 +141,15 @@ out<<arr1[maxPos].dirOut()<<" - cheapest direction;"<<endl;
   in.open("input-2.txt");
 //in.open("input-2.txt",istream&in);
 out<<endl;
-in>>n;
-luggage * arr2 = new luggage[n];
+in>>count[2];
+count[0]+=count[2];
+cout<<count[2]<<endl;
+luggage * arr2 = new luggage[count[2]];
 in>>arr2[0];
 out<<arr2[0];
 max = arr2[0].priceOut();
 maxPos = 0;
-for(int i=1;i<n;i++){
+for(int i=1;i<count[2];i++){
   in>>arr2[i];
   if(max>arr2[i].priceOut()){
     max = arr2[i].priceOut();
@@ -158,12 +163,34 @@ in.close();
 in.open("input-3.txt");
 out<<endl;
 
-in>>n;
-business * arr3 = new business[n];
-for(int i=0;i<n;i++){
+in>>count[3];
+count[0]+=count[3];
+cout<<count[3]<<endl;
+business * arr3 = new business[count[3]];
+for(int i=0;i<count[3];i++){
   in>>arr3[i];
   //виводити не потрібно згідно умови, але я вивів
   out<<arr3[i];
+}
+//RESULT PHASE
+out<<endl;
+cout<<count[0];//for assurance
+int n=0,n1=0,n2=0;
+business arrR = new business[count[0]];
+for(int i=0;i<count[0];i++){
+  if(i<count[1]){
+    arrR[i] = arr1[n];
+    n++;
+  }
+  if(i>=count[1]&&i<count[2]){
+    arrR[i] = arr2[n1];
+    n1++;
+  }
+  if(i>=count[2]){
+    arrR[i] = arr3[n2];
+    n2++;
+  }
+out<<arrR[i];
 }
 
 
