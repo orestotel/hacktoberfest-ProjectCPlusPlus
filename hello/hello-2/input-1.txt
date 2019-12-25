@@ -1,4 +1,4 @@
 3
-Ryanair Lviv Dubliany 100
+Ryanair Lviv Dubliany 138
 TurkAirlines Kyiv Budapest 141
-AronovAirlines Lutsk Vinnytsia 126
+AronovAir Lutsk Vinnytsia 126
