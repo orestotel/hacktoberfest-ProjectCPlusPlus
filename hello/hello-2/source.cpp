@@ -176,23 +176,19 @@ for(int i=0;i<count[3];i++){
 out<<endl;
 cout<<count[0];//for assurance
 int n=0,n1=0,n2=0;
-business arrR = new business[count[0]];
-for(int i=0;i<count[0];i++){
-  if(i<count[1]){
-    arrR[i] = arr1[n];
-    n++;
-  }
-  if(i>=count[1]&&i<count[2]){
-    arrR[i] = arr2[n1];
-    n1++;
-  }
-  if(i>=count[2]){
-    arrR[i] = arr3[n2];
-    n2++;
-  }
-out<<arrR[i];
+oblik ** arrR = new oblik*[count[0]];
+for(int i=0;i<count[1];i++){
+  arrR[i] = arr1+i;
 }
-
+for(int i=count[1];i<count[1]+count[2];i++){
+  arrR[i]=arr2+i-count[1];
+}
+for(int i=count[1]+count[2];i<count[0];i++){
+  arrR[i]=arr3+i-count[1]-count[2];
+}
+for(int i=0;i<count[0];i++){
+out<<*arrR[i];
+}
 
 
 return 0;

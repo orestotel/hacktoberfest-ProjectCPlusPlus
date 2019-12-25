@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <signal.h>
 using namespace std;
 class payment {
 protected:
@@ -76,7 +77,7 @@ int main(){
     if(arr[i].getSum()>max){
       max = arr[i].getSum();
       maxPos = i;
-    }
+    }}
   out<<arr[maxPos];
 
   in.close();
@@ -88,32 +89,61 @@ int main(){
     out<<arr_1[i];
   }
 
-  double max = arr_1[0].getSum();
+  max = arr_1[0].getSum();
   int maxPos_1=0;
   string * numbers = new string[n];
   int j = 0;
-  numbers[0]=arr[1].getNumber();
+  numbers[0]=arr_1[0].getNumber();
   for(int i=1; i<n; i++){
     if(arr_1[i].getSum()>max){
       max = arr_1[i].getSum();
       maxPos_1 = i;
     }
-out<<arr[maxPos_1];
-    bool check = true;
-for(int k = 0;k<=j;k++){
-  if(arr[i].getNumber()==arr[k]){
-    check = false;
+    }
+for(int k = 0;k<n;k++){
+  numbers[k]=arr_1[k].getNumber();
+
   }
+
+  for(int i=0;i<n;i++){
+  for(int j=0;j<n-1;j++){
+  if(numbers[j]>numbers[j+1]){
+    string temp = numbers[j];
+    numbers[j] = numbers[j+1];
+    numbers[j+1] = temp;
   }
-  if(check){
-    j++;
-    numbers[j]=arr[i].getNumber();
   }
 }
-for(int i=0; i<j;i++){
+string * numbers2 = new string[n];
+int w = 0;
+numbers2[w]=numbers[0];
+w++;
+for(int i=1;i<n;i++){
+if(numbers[i-1]!=numbers[i]){
+numbers2[w]=numbers[i];
+w++;
+}
+
+}
+out<<arr_1[maxPos_1];
+
+for(int i=0; i<n;i++){
   cout<<numbers[i]<<" ";
 }
 cout<<endl;
 
+for(int i=0; i<w;i++){
+  cout<<numbers2[i]<<" ";
+}
+int*totalSum = new int[w];
+for(int i=0;i<w;i++){
+  totalSum[i]=0;
+  for(int j=0;j<n;j++){
+    if(numbers2[i]==arr_1[j].getNumber()){
+      totalSum[i]+=arr_1[j].getSum();
+    }
+  }
+  cout<<numbers2[i]<<" : "<<totalSum[i]<<endl;
+}
 
 }

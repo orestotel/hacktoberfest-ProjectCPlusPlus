@@ -14,3 +14,16 @@ SliderAir; (Greece -> Minnesota); base-price:164; mass:11; luggage-coef:0.04; pr
 DokiyaAir; (Paris -> London); base-price:129; mass:4; luggage-coef:0.12; price with luggage:190.92 price with deluxe:400.932
 VitaAir; (Tustan -> Athens); base-price:160; mass:18; luggage-coef:0.021; price with luggage:220.48 price with deluxe:246.938
 HelloAir; (Bremen -> Munchen); base-price:181; mass:1; luggage-coef:0.151; price with luggage:208.331 price with deluxe:335.413
+
+Ryanair; (Lviv -> Dubliany) $:138
+TurkAirlines; (Kyiv -> Budapest) $:141
+AronovAir; (Lutsk -> Vinnytsia) $:126
+BrilliantAir; (Estonia -> Karpaty) $:150
+AvalonAir; (Seattle -> Vienna) $:122
+MolokiyaAir; (Hamburg -> Poltava) $:121
+GalaretkaAir; (Berlin -> Krakiv) $:90
+DanoneAir; (Madagascar -> Kuba) $:180
+SliderAir; (Greece -> Minnesota) $:164
+DokiyaAir; (Paris -> London) $:129
+VitaAir; (Tustan -> Athens) $:160
+HelloAir; (Bremen -> Munchen) $:181
