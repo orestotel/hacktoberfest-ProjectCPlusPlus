@@ -3,8 +3,14 @@ TurkAirlines; (Kyiv -> Budapest) $:141
 AronovAir; (Lutsk -> Vinnytsia) $:126
 (Lutsk -> Vinnytsia) - cheapest direction;
 
-BrilliantAir; (Estonia -> Karpaty) mass:22; coef:0.01 $:183
-AvalonAir; (Seattle -> Vienna) mass:12; coef:0.014 $:142.496
-MolokiyaAir; (Hamburg -> Poltava) mass:10; coef:0.04 $:169.4
-GalaretkaAir; (Berlin -> Krakiv) mass:15; coef:0.02 $:117
+BrilliantAir; (Estonia -> Karpaty); base-price:150 mass:22; coef:0.01; price with luggage:183
+AvalonAir; (Seattle -> Vienna); base-price:122 mass:12; coef:0.014; price with luggage:142.496
+MolokiyaAir; (Hamburg -> Poltava); base-price:121 mass:10; coef:0.04; price with luggage:169.4
+GalaretkaAir; (Berlin -> Krakiv); base-price:90 mass:15; coef:0.02; price with luggage:117
 Cheapest w/luggage: GalaretkaAir (Berlin -> Krakiv)
+
+DanoneAir; (Madagascar -> Kuba); base-price:180; mass:14; luggage-coef:0.08; price with luggage:381.6 price with deluxe:610.56
+SliderAir; (Greece -> Minnesota); base-price:164; mass:11; luggage-coef:0.04; price with luggage:236.16 price with deluxe:283.392
+DokiyaAir; (Paris -> London); base-price:129; mass:4; luggage-coef:0.12; price with luggage:190.92 price with deluxe:400.932
+VitaAir; (Tustan -> Athens); base-price:160; mass:18; luggage-coef:0.021; price with luggage:220.48 price with deluxe:246.938
+HelloAir; (Bremen -> Munchen); base-price:181; mass:1; luggage-coef:0.151; price with luggage:208.331 price with deluxe:335.413

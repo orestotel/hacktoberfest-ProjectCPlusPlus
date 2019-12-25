@@ -61,29 +61,56 @@ class luggage:public oblik{
   protected:
     double mass;
     double coef;
+    double l_price;
   public:
     luggage():oblik(){
       mass = 0;
       coef = 0;
+      l_price = 0;
     }
     friend istream&operator>>(istream&in, luggage&p){
     in>>p.companyName>>p.direction[0]>>p.direction[1]>>p.price>>p.mass>>p.coef;
-      p.price = p.price*(1+p.mass*p.coef);
+      p.l_price = p.price*(1+p.mass*p.coef);
       //coefficient must be 10+ times smaller than mass
+      //e.g. 0.01, 0.02, 0.014..
       return in;
     }
     friend ostream&operator<<(ostream&out, luggage&p){
       out<<p.companyName<<"; ("<<p.direction[0];
-      out<<" -> "<<p.direction[1]<<")";
-      out<<" mass:"<<p.mass<<"; coef:"<<p.coef<<" $:"<<p.price<<endl;
+      out<<" -> "<<p.direction[1]<<"); base-price:"<<p.price;
+      out<<" mass:"<<p.mass<<"; coef:"<<p.coef;
+      out<<"; price with luggage:"<<p.l_price<<endl;
       return out;
     }
 
 };
 class business:public luggage{
-private:
-
-public:
+  private:
+    double b_coef;
+    double b_price;
+  public:
+    business():luggage(){
+      b_coef = 0;
+      b_price = 0;
+    }
+    friend istream&operator>>(istream&in, business&p){
+      in>>p.companyName>>p.direction[0]>>p.direction[1]>>p.price>>p.mass>>p.coef>>p.b_coef;
+      p.l_price = p.price*(1+p.mass*p.coef);
+      p.b_price = p.l_price*p.b_coef;
+      //luggage coefficient must be 10+ times smaller than mass
+      //e.g. 0.01, 0.02, 0.014..
+      //b_coef must vary around 1-2 normally
+      //e.g 1.5, 1.17, 1.71, 2.18..
+      return in;
+    }
+    friend ostream&operator<<(ostream&out, business&p){
+      out<<p.companyName<<"; ("<<p.direction[0];
+      out<<" -> "<<p.direction[1]<<"); base-price:"<<p.price;
+      out<<"; mass:"<<p.mass<<"; luggage-coef:"<<p.coef;
+      out<<"; price with luggage:"<<p.l_price;
+      out<<" price with deluxe:"<<p.b_price<<endl;
+      return out;
+    }
 
 };
 int main(){
@@ -125,7 +152,20 @@ for(int i=1;i<n;i++){
   }
   out<<arr2[i];
 }
-out<<"Cheapest w/luggage: "<<arr2[maxPos].nameOut()<<" "<<arr2[maxPos].dirOut();
+out<<"Cheapest w/luggage: "<<arr2[maxPos].nameOut()<<" "<<arr2[maxPos].dirOut()<<endl;
+//PHASE 3
+in.close();
+in.open("input-3.txt");
+out<<endl;
+
+in>>n;
+business * arr3 = new business[n];
+for(int i=0;i<n;i++){
+  in>>arr3[i];
+  //виводити не потрібно згідно умови, але я вивів
+  out<<arr3[i];
+}
+
 
 
 return 0;

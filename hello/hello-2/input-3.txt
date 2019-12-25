@@ -1,0 +1,6 @@
+5
+DanoneAir Madagascar Kuba 180 14 0.08 1.6
+SliderAir Greece Minnesota 164 11 0.04 1.2
+DokiyaAir Paris London 129 4 0.12 2.1
+VitaAir Tustan Athens 160 18 0.021 1.12
+HelloAir Bremen Munchen 181 1 0.151 1.61
