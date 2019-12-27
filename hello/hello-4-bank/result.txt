@@ -1,0 +1,27 @@
+Bank cards:
+Surname: Brian; number:8124124; balance:100_$;
+Surname: Henry; number:12849124; balance:128_$;
+Surname: Billy; number:41592951; balance:0.12_$;
+Max-balance element == Surname: Henry; number:12849124; balance:128_$;
+
+Surname: Finn; number:923712; balance-1:156_$; balance-2:11; total:167_$
+Surname: Ben; number:247171; balance-1:162_$; balance-2:623; total:785_$
+Surname: Xavier; number:1357915; balance-1:514_$; balance-2:356; total:870_$
+Surname: Nathan; number:4892817; balance-1:351_$; balance-2:141; total:492_$
+Max balance == Surname: Xavier; number:1357915; balance-1:514_$; balance-2:356; total:870_$
+
+Surname: Bernard; number:72892245; balance-1:612_$; balance-2:152_$; loan-maximum:20%; total:916.8_$
+Surname: George; number:36314735; balance-1:72_$; balance-2:112_$; loan-maximum:90%; total:349.6_$
+Maximum-total == Surname: Bernard; number:72892245; balance-1:612_$; balance-2:152_$; loan-maximum:20%; total:916.8_$
+
+All cards
+Surname: Brian; number:8124124; balance:100_$;
+Surname: Henry; number:12849124; balance:128_$;
+Surname: Billy; number:41592951; balance:0.12_$;
+Surname: Finn; number:923712; balance-1:156_$; balance-2:11; total:167_$
+Surname: Ben; number:247171; balance-1:162_$; balance-2:623; total:785_$
+Surname: Xavier; number:1357915; balance-1:514_$; balance-2:356; total:870_$
+Surname: Nathan; number:4892817; balance-1:351_$; balance-2:141; total:492_$
+Surname: Bernard; number:72892245; balance-1:612_$; balance-2:152_$; loan-maximum:20%; total:916.8_$
+Surname: George; number:36314735; balance-1:72_$; balance-2:112_$; loan-maximum:90%; total:349.6_$
+Maximum total sum element == Surname: Bernard; number:72892245; balance-1:612_$; balance-2:152_$; loan-maximum:20%; total:916.8_$
