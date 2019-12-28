@@ -1,0 +1,3 @@
+Triangle: 14 15 11; area:73.4847
+Triangle: 1 12 18; area:-nan
+Triangle: 4 1 9; area:-nan
